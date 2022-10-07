@@ -7223,6 +7223,7 @@ UI.TextEdit(storage.stopcave or "Shift+Space", function(widget, text)
   storage.stopcave = text
 end,rightPanel)
 
+UI.Label(" ", rightPanel)
 macro(1, "Virar [SETINHAS]", function()
 
   if modules.corelib.g_keyboard.isKeyPressed('Up') then

@@ -7237,6 +7237,36 @@ macro(1, "Virar [SETINHAS]", function()
   end
 end,rightPanel)
 
+UI.Label(" ", rightPanel)
+
+macro(1, 'SENSE .', function()
+  if g_game.isAttacking() then
+    storage.Sense = g_game.getAttackingCreature():getName()
+  end
+      if storage.Sense then
+          locatePlayer = getPlayerByName(storage.Sense)
+          if not (locatePlayer and locatePlayer:getPosition().z == player:getPosition().z and getDistanceBetween(pos(), locatePlayer:getPosition()) <= 6) then
+              say('sense "' .. storage.Sense)
+              delay(1000)
+          end
+      end
+  end)
+
+
+  onTalk(function(name, level, mode, text, channelId, pos)
+      if player:getName() == name then
+          if string.sub(text, 1, 1) == '.' then
+              local checkMsg = string.sub(text, 2, 1000):trim()
+              print(checkMsg)
+              if checkMsg == '' then
+                  storage.Sense = false
+              else
+                  storage.Sense = checkMsg
+              end
+          end
+      end
+  end)
+
 
 addCheckBox("limpartexto", "Limpar Textos", false, leftPanel, "Sem mensagens Laranja na tela.")
 if true then

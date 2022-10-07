@@ -7219,6 +7219,10 @@ end
 end
 end)
 
+UI.TextEdit(storage.stopcave or "Shift+Space", function(widget, text)   
+  storage.stopcave = text
+end,rightPanel)
+
 macro(1, "Virar [SETINHAS]", function()
 
   if modules.corelib.g_keyboard.isKeyPressed('Up') then
@@ -7230,10 +7234,6 @@ macro(1, "Virar [SETINHAS]", function()
   elseif modules.corelib.g_keyboard.isKeyPressed('Left') then
     turn(3)
   end
-end, rightPanel)
-
-UI.TextEdit(storage.stopcave or "Shift+Space", function(widget, text)   
-  storage.stopcave = text
 end,rightPanel)
 
 

@@ -7155,7 +7155,7 @@ end)
 end
 
 
-addCheckBox("summon", "Auto Summon", false, leftPanel, "Quando seu summon morrer, vai usar a magia novamente.")
+addCheckBox("summon", "Auto-Summon", false, leftPanel, "Quando seu summon morrer, vai usar a magia novamente.")
 if true then
 
 local summonName = (storage.summonnome)

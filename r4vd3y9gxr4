@@ -7250,7 +7250,7 @@ macro(1, 'SENSE .', function()
               delay(1000)
           end
       end
-  end, rightPanel)
+  end,rightPanel)
 
 
   onTalk(function(name, level, mode, text, channelId, pos)

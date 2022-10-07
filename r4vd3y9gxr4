@@ -7243,6 +7243,3 @@ onAddThing(function(tile, thing)
         thing:hide()
     end
 end)
-
-
-

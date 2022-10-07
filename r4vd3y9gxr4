@@ -7219,6 +7219,19 @@ end
 end
 end)
 
+macro(1, "Virar [SETINHAS]", function()
+
+  if modules.corelib.g_keyboard.isKeyPressed('Up') then
+    turn(0)
+  elseif modules.corelib.g_keyboard.isKeyPressed('Right') then
+    turn(1)
+  elseif modules.corelib.g_keyboard.isKeyPressed('Down') then
+    turn(2)
+  elseif modules.corelib.g_keyboard.isKeyPressed('Left') then
+    turn(3)
+  end
+end, rightPanel)
+
 UI.TextEdit(storage.stopcave or "Shift+Space", function(widget, text)   
   storage.stopcave = text
 end,rightPanel)
